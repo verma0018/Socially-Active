@@ -1,56 +1,39 @@
-(function ($) {
-    "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
+var typed = new Typed(".typing", {
+    strings: ["Connecting","Engaging", "Growing"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
 
-
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 45 & $(window).width() > 992) {
-            $('.navbar').addClass('sticky-top shadow-sm');
-            // $('#myImage').attr('src', 'img/newLogo.png');
-        } else {
-            if(!($(window).width() < 992)){
-                $('.navbar').removeClass('sticky-top shadow-sm');
-                // $('#myImage').attr('src', 'img/newLogo-light.png');
-            }
-            
-        }
-    });
+var spinner = function () {
+            setTimeout(function () {
+                if ($('#spinner').length > 0) {
+                    $('#spinner').removeClass('show');
+                }
+            }, 1);
+        };
+        spinner();
 
 
-    // Function to change the image source
-    // $(document).ready(function(){
-        
-    //     function changeImage() {
-    //         if ($(window).width() < 992) {
-    //             $('#myImage').attr('src', 'img/newLogo.png');
-    //         } else {
-    //             $('#myImage').attr('src', 'img/newLogo-light.png');
-    //         }
-    //     }
-    
-    //     // Initial call to changeImage
-    //     changeImage();
-    
-    //     // Event listener for window resize
-    //     $(window).resize(function() {
-    //         changeImage();
-    //     });
-    // });
-    
+let nav = document.querySelector(".navbar");
+window.onscroll = function () {
+    if(document.documentElement.scrollTop > 20){
+        nav.classList.add("header-scrolled");
+    }else{
+        nav.classList.remove("header-scrolled");
+    }
+}
+
+// nav hide 
+let navBar = document.querySelectorAll(".nav-link");
+let navCollapse = document.querySelector(".navbar-collapse.collapse");
+navBar.forEach(function(a){
+    a.addEventListener("click", function(){
+        navCollapse.classList.remove("show");
+    })
+})
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -64,62 +47,30 @@
         return false;
     });
 
+    document.querySelector('.contact').addEventListener("submit", submitForm);
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
-
-
-    // Client carousel
-    $(".client-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 90,
-        dots: false,
-        loop: true,
-        nav : false,
-        responsive: {
-            0:{
-                items:2
-            },
-            576:{
-                items:3
-            },
-            768:{
-                items:4
-            },
-            992:{
-                items:5
-            },
-            1200:{
-                items:6
-            }
-        }
-    });
+    function submitForm(e){
+        e.preventDefault();
+        let name = document.getElementById('name').value;
+        let mail = document.getElementById('email').value;
+        let sub = document.getElementById('subject').value;
+        let message = document.getElementById('message').value;
+        document.querySelector('.contact-form').reset();
     
-})(jQuery);
-
+        sendMail(name,mail,sub,message);
+    }
+    
+    function sendMail(name,mail,sub,message) {
+        Email.send({
+            Host : "smtp.gmail.com",
+            // Username : "sendmailtobetaque@gmail.com",
+            Password : "dgmsrbdfrthytthh",
+            // 61186C07E03B60A2AC7039EC93340D540140 This is My Elastic Mail SMTP Credentials Password for mail verma07126@gmail.com Port 2525
+            // SecureToken : "22efb137-8bdd-4cb5-950a-8ea8b708b137",
+            To : 'sendmailtobetaque@gmail.com',
+            From : `${mail}`,
+            Subject : `${name} sent you a message: ${sub}`,
+            Body : `Name: ${name} <br/> Email: ${mail} <br/> Message: ${message}`,
+        }).then(
+            message => alert(message));
+    }

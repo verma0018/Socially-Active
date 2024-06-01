@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,504 +33,590 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="85">
     <!-- <div class="container-fluid bg-white p-0"> -->
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-dark" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
         </div>
-        <!-- Spinner End -->
+    <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-2">
-                <a href="index.html" class="navbar-brand p-0 d-flex" style="align-items: center;">
-                    <img src="img/Final.png" id="myImage" alt="Logo">
-                    <h1 class="m-0">Socially Active#</h1>
+    <!-- Navbar & Hero Start -->
+
+    <header class="header_wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid nav-row">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo-new.png" class="img-fluid" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
+                <button class="navbar-toggler pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-stream navbar-toggler-icon"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Digital Marketing?</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="why-us.html" class="nav-item nav-link">Why Us</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                    </div>
-                    <!-- <a href="" class="btn btn-light rounded-pill text-dark py-2 px-4 ms-lg-5">Free Quote</a> -->
-                </div>
-            </nav>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav menu-navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-us">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#why-us">Why_Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">Testimonial</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item text-center contact-btn">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
 
-            <div class="container-fluid bg-dark hero-header">
-                <div class="container">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 text-left text-lg-start index-head">
-                            <h1 class="text-white mb-4 animated zoomIn">Your Trusted Partner <br> for </h1>
-                            <p class="text-white pb-3 animated zoomIn">A pioneering name in the industry, specializes in top-notch <br> solutions tailored to the needs of small and medium-sized enterprises.</p>
-                            <a href="#about-us" class="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="hero-img img-fluid animated zoomIn" src="img/hero-bg.png" alt="Image By Freepik">
-                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar section exit -->
+
+    <!-- Banner section -->
+    <section id="home" class="banner_wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 header-img-section">
+                    <img src="img/hero_img.png" class="img-fluid" alt="Banner">
+                </div>
+                <div class="col-md-6 my-5 my-md-0 text-center text-md-start">
+                    <p class="banner-subtitle">Digital Marketing</p>
+                    <h1 class="banner-title">Start <span class="typing"></span> <br> with your online customers</h1>
+                    <p class="banner-title-text">Hashtag is a bright and results driven Digital marketing
+                        drive customers, grow your audience and expand your reach.</p>
+                    <div class="learn-more-btn-section">
+                        <a class="nav-link learn-more-btn btn-header" href="#about">Get Started</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+    </section>
+    <!-- Banner section exit -->
 
 
-        <!-- About Start -->
-        <div class="container-fluid py-6" id="about-us">
+    <!-- About Start -->
+    <div class="container-fluid py-6 about_wrapper" id="about-us">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="about_number">1</p>
+                    <!-- <div class="d-inline-block border rounded-pill text-dark px-4 mb-3">Why Digital Marketing?</div> -->
+                    <h2 class="mb-4 about_title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, vitae.
+                    </h2>
+                    <p class="mb-4 about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque est ducimus obcaecati
+                        accusamus voluptatum aspernatur natus a perspiciatis earum molestias?</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-dark">
+                                <i class="fa fa-user-tie text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h6>Lorem ipsum dolor sit amet.</h6>
+                                <span class="about_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam illum
+                                    reiciendis ullam excepturi aperiam culpa a neque est ratione?</span>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-dark">
+                                <i class="fa fa-solid fa-fan text-white"></i>
+                                <!-- <i class="fa fa-chart-line text-white"></i> -->
+                            </div>
+                            <div class="ms-4">
+                                <h6>lorem</h6>
+                                <span class="about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mt-2" href="about.html">Read More</a>
+                </div>
+                <div class="col-lg-6 wow zoomIn about-img1" data-wow-delay="0.1s">
+                    <!-- <img class="img-fluid about-img" alt="Image by storyset on Freepik" src="img/about-2.jpg"> -->
+                    <img class="img-fluid about-img" alt="Image by storyset on Freepik" src="img/about.png">
+                </div>
+            </div>
+        </div>
+        <div class="innovate mt-5">
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow zoomIn" data-wow-delay="0.1s">
-                        <!-- <img class="img-fluid about-img" alt="Image by storyset on Freepik" src="img/about-2.jpg"> -->
-                        <img class="img-fluid about-img" alt="Image by storyset on Freepik" src="img/about.png">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-6 px-5 text-center text-md-start">
+                        <img src="img/innovation.png" class="img-fluid">
                     </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="d-inline-block border rounded-pill text-dark px-4 mb-3">Why Digital Marketing?</div>
-                        <h2 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, vitae.
-                        </h2>
-                        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque est ducimus obcaecati accusamus voluptatum aspernatur natus a perspiciatis earum molestias?</p>
-                        <div class="row g-3 mb-4">
-                            <div class="col-12 d-flex">
-                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-dark">
-                                    <i class="fa fa-user-tie text-white"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <h6>Lorem ipsum dolor sit amet.</h6>
-                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda magnam illum reiciendis ullam excepturi aperiam culpa a neque est ratione?</span>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex">
-                                <div class="flex-shrink-0 btn-lg-square rounded-circle bg-dark">
-                                    <i class="fa fa-solid fa-fan text-white"></i>
-                                    <!-- <i class="fa fa-chart-line text-white"></i> -->
-                                </div>
-                                <div class="ms-4">
-                                    <h6>lorem</h6>
-                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsum.</span>
-                                </div>
-                            </div>
+                    <div class="col-sm-12 col-lg-6 text-center text-lg-start">
+                        <p class="about_number">2</p>
+                        <h2 class="about_title">The best digital marketing company we understand your needs</h2>
+                        <p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in nisi auctor lacinia.</p>
+                        <div class="mt-5">
+                            <a class="learn-more-btn btn-header" href="#">Learn more</a>
                         </div>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mt-2" href="about.html">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-
-<!-- New Services -->
-
-<section id="services" class="services section-bg ">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Services</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. <br> Sit sint consectetur velit. Quisquam quos quisquam.</p>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <i class="bi bi-briefcase"></i>
-            <h4><a href="#">Lorem Ipsum</a></h4>
-            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-            <i class="bi bi-card-checklist"></i>
-            <h4><a href="#">Dolor Sitema</a></h4>
-            <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-            <i class="bi bi-bar-chart"></i>
-            <h4><a href="#">Sed ut perspiciatis</a></h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-            <i class="bi bi-binoculars"></i>
-            <h4><a href="#">Nemo Enim</a></h4>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-            <i class="bi bi-brightness-high"></i>
-            <h4><a href="#">Magni Dolore</a></h4>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 mt-md-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
-            <i class="bi bi-calendar4-week"></i>
-            <h4><a href="#">Eiusmod Tempor</a></h4>
-            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
+    <!-- About End -->
 
+    <div class="free_trial">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-12 col-lg-6 text-center text-lg-start">
+                    <h2 class="free_title">Ready to get started now with our multipurpose landing page?</h2>
+                </div>
+                <div class="col-sm-12 col-lg-6 text-center text-lg-end mt-4 mt-lg-0"> 
+                    <a class="learn-more-btn" href="#contact"><i class="fa fa-rocket" aria-hidden="true"></i> Reach Out To Us</a> 
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Features Start -->
-        <div class="container-fluid py-6">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="d-inline-block border rounded-pill text-dark px-4 mb-3">Features</div>
-                        <h2 class="mb-4">Why People Choose Us? We Are Trusted & Award Wining Agency</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum ducimus iusto nihil eos, iure, voluptatem enim fugit veniam repellendus, est illo libero ea earum? Reprehenderit, dolorem, recusandae ab architecto quaerat perspiciatis consequatur velit laborum iusto, quibusdam labore suscipit. Aperiam quisquam quia necessitatibus temporibus alias </p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias odit eaque sunt deleniti maiores neque soluta explicabo vitae ullam magnam!</p>
-                        <a class="btn btn-dark rounded-pill py-3 px-5 mt-2" href="why-us.html">Read More</a>
+    <!-- New Services -->
+
+    <!-- Features section -->
+    <section id="services" class="features_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="features_subtitle">So much to offer</p>
+                    <h2 class="features_title">Our automated features</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-1">
+                        <h3>Consultancy</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
                     </div>
-                    <div class="col-lg-7">
-                        <div class="row g-5">
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-cubes text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">Best In Industry</h6>
-                                </div>
-                                <span>Setting the Standard: Leaders in Quality and Efficiency for Over 15 Years.</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-percent text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">Quality Service</h6>
-                                </div>
-                                <span>Excellence Redefined: Elevating Standards in Every Detail.</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-award text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">Safety First Program</h6>
-                                </div>
-                                <span>"Prioritizing Safety: Our Commitment to Employee Well-being and Workplace Security"</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-smile-beam text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">100% Happy Client</h6>
-                                </div>
-                                <span>Ensuring 100% Client Satisfaction: Our Ultimate Commitment.</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-user-tie text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">Professional Employees</h6>
-                                </div>
-                                <span>Exceptional Talent Driving Excellence At Your Door Step.</span>
-                            </div>
-                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.6s">
-                                <div class="d-flex align-items-center mb-3">
-                                    <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
-                                        <i class="fa fa-headset text-white"></i>
-                                    </div>
-                                    <h6 class="mb-0">24/7 Customer Support</h6>
-                                </div>
-                                <span>Unwavering Support Around the Clock: Your Reliable Partner for Any Query or Concern.</span>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-2">
+                        <h3>Tech Solutions</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-3">
+                        <h3>User Dashboard</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-4">
+                        <h3>Deadline Notifications</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-5">
+                        <h3>Data Retrieval</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="ft-6">
+                        <h3>Flexible System</h3>
+                        <p class="features_text">Duis felis nulla, porttitor et ex a, porttitor rhoncus ex. Sed tellus
+                            turpis, finibus in elit rhoncus, varius cursus enim. Sed tempus sapien in.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Features End -->
+    </section>
+    <!-- Features section exit -->
 
-
-
-
-<div class="testimonial-section container-fluid">
     
 
-    <div class="container section-bg">
-        <div class="testimonial-header">
-            <h2>Testimonial</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa <br>
-                 quae, debitis mollitia aliquam tempore.</p>
-        </div>
-        <div class="row-test">
-            <div class="col-test">
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    
-                    <p>Upskilling at GrowthSchool helped me become a Swiss knife. I successfully managed to crack an opportunity with a mentor at GrowthSchool and I am working on enterprise SEO now.</p>
+
+    <!-- Features Start -->
+    <div class="container-fluid py-6 whyUs" id="why-us">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-inline-block border rounded-pill text-dark px-4 mb-3">Features</div>
+                    <h2 class="mb-4 whyUs-heading">Why People Choose Us? We Are Trusted & Award Wining Agency</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum ducimus iusto nihil eos,
+                        iure, voluptatem enim fugit veniam repellendus, est illo libero ea earum? Reprehenderit,
+                        dolorem, recusandae ab architecto quaerat perspiciatis consequatur velit laborum iusto,
+                        quibusdam labore suscipit. Aperiam quisquam quia necessitatibus temporibus alias </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias odit eaque sunt deleniti maiores
+                        neque soluta explicabo vitae ullam magnam!</p>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 mt-2" href="why-us.html">Read More</a>
                 </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
+                <div class="col-lg-7">
+                    <div class="row g-5">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-cubes text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Best In Industry</h6>
+                            </div>
+                            <span>Setting the Standard: Leaders in Quality and Efficiency for Over 15 Years.</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-percent text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Quality Service</h6>
+                            </div>
+                            <span>Excellence Redefined: Elevating Standards in Every Detail.</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-award text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Safety First Program</h6>
+                            </div>
+                            <span>"Prioritizing Safety: Our Commitment to Employee Well-being and Workplace
+                                Security"</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-smile-beam text-white"></i>
+                                </div>
+                                <h6 class="mb-0">100% Happy Client</h6>
+                            </div>
+                            <span>Ensuring 100% Client Satisfaction: Our Ultimate Commitment.</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-user-tie text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Professional Employees</h6>
+                            </div>
+                            <span>Exceptional Talent Driving Excellence At Your Door Step.</span>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-dark rounded-circle me-3">
+                                    <i class="fa fa-headset text-white"></i>
+                                </div>
+                                <h6 class="mb-0">24/7 Customer Support</h6>
+                            </div>
+                            <span>Unwavering Support Around the Clock: Your Reliable Partner for Any Query or
+                                Concern.</span>
                         </div>
                     </div>
-                    <p>optimized my profile and can definitely see the results. The detailing of the course is amazing. All the concepts have been taught in-depth. Thank you Vaibhav Sisinty > and GrowthSchool for curating these courses and making our career and LinkedIn reach better.</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>From GrowthSchool, I began learning about Performance Marketing. I appreciate you for holding such an excellent workshop Deepan Siddhu Ashwin Palo.</p>
-                </div>
-            </div>
-            <div class="col-test">
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>Learning from the @saptarshipr the legend himself, love you for staying after hours to clear all our doubts ⚫ & great job @growthschoolio for conducting such amazing workshops - open for #uiuxdesign opportunities</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>From feeling very under-confident about making a career in UX to getting a job in Dehaat as a product designer it would have never been</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who wants to kick-start their LinkedIn journey and also want to use it to its full potential. The workshop is well worth your money and time. Thank you Vaibhav Sisinty for conducting such an engaging and valuable session and sharing so many incredible hacks.</p>
-                </div>
-            </div>
-            <div class="col-test">
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>Learning from the @saptarshipr the legend himself, love you for staying after hours to clear all our doubts ⚫ & great job @growthschoolio for conducting such amazing workshops - open for #uiuxdesign opportunities</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>From feeling very under-confident about making a career in UX to getting a job in Dehaat as a product designer it would have never been</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="test-card-header">
-                        <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
-                        <div class="test-card-header-content">
-                            <h2>Roopesh Bhosle</h2>
-                            <p>SEO Manager</p>
-                        </div>
-                    </div>
-                    <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who wants to kick-start their LinkedIn journey and also want to use it to its full potential. The workshop is well worth your money and time. Thank you Vaibhav Sisinty for conducting such an engaging and valuable session and sharing so many incredible hacks.</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!-- Features End -->
 
 
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
-    <div class="container" data-aos="fade-up">
-      <div class="contact-section-header">
-        <h2>Contact Us</h2>
-        <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil <br> id ratione ea sunt quis dolorem dolore earum</p>
-      </div>
 
-      <div class="row contact-section gx-lg-0 gy-4">
-        <div class="col-lg-4 contact-left">
-          <div class="info-container d-flex flex-column align-items-center justify-content-center">
-                <div class="info-item d-flex">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                    <h4>Location:</h4>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+
+    <div class="testimonial-section container-fluid" id="reviews">
+
+
+        <div class="container section-bg">
+            <div class="testimonial-header">
+                <h2>Testimonial</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa <br>
+                    quae, debitis mollitia aliquam tempore.</p>
+            </div>
+            <div class="row-test">
+                <div class="col-test">
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+
+                        <p>Upskilling at GrowthSchool helped me become a Swiss knife. I successfully managed to crack an
+                            opportunity with a mentor at GrowthSchool and I am working on enterprise SEO now.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>optimized my profile and can definitely see the results. The detailing of the course is
+                            amazing. All the concepts have been taught in-depth. Thank you Vaibhav Sisinty > and
+                            GrowthSchool for curating these courses and making our career and LinkedIn reach better.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>From GrowthSchool, I began learning about Performance Marketing. I appreciate you for holding
+                            such an excellent workshop Deepan Siddhu Ashwin Palo.</p>
+                    </div>
                 </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                    <h4>Email:</h4>
-                    <p>info@example.com</p>
+                <div class="col-test">
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>Learning from the @saptarshipr the legend himself, love you for staying after hours to clear
+                            all our doubts ⚫ & great job @growthschoolio for conducting such amazing workshops - open
+                            for #uiuxdesign opportunities</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>From feeling very under-confident about making a career in UX to getting a job in Dehaat as a
+                            product designer it would have never been</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all
+                            know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who
+                            wants to kick-start their LinkedIn journey and also want to use it to its full potential.
+                            The workshop is well worth your money and time. Thank you Vaibhav Sisinty for conducting
+                            such an engaging and valuable session and sharing so many incredible hacks.</p>
+                    </div>
                 </div>
-                </div><!-- End Info Item -->
-
-                <div class="info-item d-flex">
-                <i class="bi bi-phone flex-shrink-0"></i>
-                <div>
-                    <h4>Call:</h4>
-                    <p>+1 5589 55488 55</p>
+                <div class="col-test">
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>Learning from the @saptarshipr the legend himself, love you for staying after hours to clear
+                            all our doubts ⚫ & great job @growthschoolio for conducting such amazing workshops - open
+                            for #uiuxdesign opportunities</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>From feeling very under-confident about making a career in UX to getting a job in Dehaat as a
+                            product designer it would have never been</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="test-card-header">
+                            <img src="https://via.placeholder.com/50" alt="Roopesh Bhosle">
+                            <div class="test-card-header-content">
+                                <h2>Roopesh Bhosle</h2>
+                                <p>SEO Manager</p>
+                            </div>
+                        </div>
+                        <p>I want to thank GrowthSchool for hosting such a comprehensive and profound workshop. We all
+                            know LinkedIn is a goldmine of opportunities. And this workshop is designed for anyone who
+                            wants to kick-start their LinkedIn journey and also want to use it to its full potential.
+                            The workshop is well worth your money and time. Thank you Vaibhav Sisinty for conducting
+                            such an engaging and valuable session and sharing so many incredible hacks.</p>
+                    </div>
                 </div>
-                </div><!-- End Info Item -->
+            </div>
+        </div>
+    </div>
 
-                <div class="info-item d-flex">
-                <i class="bi bi-clock flex-shrink-0"></i>
-                <div>
-                    <h4>Open Hours:</h4>
-                    <p>Mon-Sat: 11AM - 23PM</p>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+            <div class="contact-section-header">
+                <h2>Contact Us</h2>
+                <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil <br> id ratione ea sunt
+                    quis dolorem dolore earum</p>
+            </div>
+
+            <div class="row contact-section gx-lg-0 gy-4">
+                <div class="col-lg-4 contact-left">
+                    <div class="info-container d-flex flex-column align-items-center justify-content-center">
+                        <div class="info-item d-flex">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h4>Location:</h4>
+                                <p>A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h4>Email:</h4>
+                                <a href="mailto:verma071276@gmail.com">info@example.com</a>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-phone flex-shrink-0"></i>
+                            <div>
+                                <h4>Call:</h4>
+                                <a href="tel:+1 5589 55488 55">+1 5589 55488 55</a>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-clock flex-shrink-0"></i>
+                            <div>
+                                <h4>Open Hours:</h4>
+                                <p>Mon-Sat: 11AM - 23PM</p>
+                            </div>
+                        </div><!-- End Info Item -->
+                    </div>
+
                 </div>
-                </div><!-- End Info Item -->
-          </div>
+
+                <div class="col-lg-8 contact-right">
+                    <form action="#" method="post" role="form" class="email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" name="message" rows="10" placeholder="Message"
+                                required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="form-btn text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div><!-- End Contact Form -->
+
+            </div>
 
         </div>
+    </section>
+    <!-- End Contact Section -->
 
-        <div class="col-lg-8 contact-right">
-          <form action="#" method="post" role="form" class="email-form">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <label for="name">Name</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <label for="email">Email Address</label>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-                <label for="subject">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-                <label for="message">Message</label>
-              <textarea class="form-control" name="message" rows="10" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="form-btn text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div><!-- End Contact Form -->
 
-      </div>
-
-    </div>
-  </section>
-  <!-- End Contact Section -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
-            <div class="container py-5">
-                <div class="row g-5 d-flex  ">
-                    <div class="col-md-6 col-lg-4">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>10501 Corporate Dr, Stafford, TX 77479</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+(281) 325-0666</p>
-                        <p><i class="fa fa-envelope me-3"></i>customerservice@ultrabuildingsvc.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s"
+        style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5 d-flex  ">
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>10501 Corporate Dr, Stafford, TX 77479</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+(281) 325-0666</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <h5 class="text-white mb-4">Quick Link</h5>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="why-us.html">Why Us</a>
-                        <a class="btn btn-link" href="service.html">Services</a>
-                        <a class="btn btn-link" href="contact.html">Contact Us</a>
-                        <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
-                    </div>
-                    <!-- <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Popular Link</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
-                    </div> -->
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Socially Active</h5>
-                        <hr>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae temporibus dicta id doloremque exercitationem, dignissimos quis saepe quae impedit fugiat..</p>
-                        <!-- <div class="position-relative w-100 mt-3">
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <h5 class="text-white mb-4">Quick Link</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="why-us.html">Why Us</a>
+                    <a class="btn btn-link" href="service.html">Services</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h5 class="text-white mb-4">Socially Active</h5>
+                    <hr>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae temporibus dicta id
+                        doloremque exercitationem, dignissimos quis saepe quae impedit fugiat..</p>
+                    <!-- <div class="position-relative w-100 mt-3">
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
                             <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-dark fs-4"></i></button>
                         </div> -->
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Socially Active</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "Tushar Verma". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="#">Tushar Verma</a>
-                            <!-- <br>Distributed By: <a class="border-bottom" href="#" target="_blank"></a> -->
-                        </div>
-                        <!-- <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div> -->
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Socially Active</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "Tushar Verma". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="#">Tushar Verma</a>
+                        <!-- <br>Distributed By: <a class="border-bottom" href="#" target="_blank"></a> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-dark btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- </div> -->
 
     <!-- JavaScript Libraries -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
