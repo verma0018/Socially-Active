@@ -1056,6 +1056,10 @@ h1 {
   margin: 10px 0;
 }
 
+.privacy-policy a{
+  color: #030a21;
+}
+
 /*** Footer ***/
 .footer .btn.btn-social {
   margin-right: 5px;
