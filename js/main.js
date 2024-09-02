@@ -47,17 +47,36 @@ navBar.forEach(function(a){
         return false;
     });
 
+
+    document.querySelectorAll('.faq_question').forEach(item => {
+        item.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+    
+            // Close all open FAQ items except the clicked one
+            document.querySelectorAll('.faq_item').forEach(i => {
+                if (i !== faqItem) {
+                    i.classList.remove('open');
+                }
+            });
+    
+            // Toggle the open state of the clicked FAQ item
+            faqItem.classList.toggle('open');
+        });
+    });
+    
+
     document.querySelector('.contact').addEventListener("submit", submitForm);
 
     function submitForm(e){
         e.preventDefault();
         let name = document.getElementById('name').value;
         let mail = document.getElementById('email').value;
+        let contact = document.getElementById('contact').value;
         let sub = document.getElementById('subject').value;
         let message = document.getElementById('message').value;
         document.querySelector('.contact-form').reset();
     
-        sendMail(name,mail,sub,message);
+        sendMail(name,mail,contact,sub,message);
     }
     
     function sendMail(name,mail,sub,message) {
