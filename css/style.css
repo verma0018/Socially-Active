@@ -359,8 +359,8 @@ body {
   overflow: hidden;
   width: 100%;
   padding: 20px 0;
-/*   background-color: #f8f9fa; */
-  background-color: #var(--bg-light-2);
+  background-color: var(--bg-light-2);
+/*   background-color: #var(--bg-light-2); */
   position: relative;
 }
 
