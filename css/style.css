@@ -236,6 +236,19 @@ body {
   transition: 0.7s;
 }
 
+.contact-btn .contact-changeColor{
+  font-size: 20px;
+  font-weight: 800;
+  border: 2px solid var(--text-dark-gray);
+  padding: 12px 32px !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  display: inline-block;
+  text-decoration: none;
+  color: white !important;
+  background-color: #090b3c;
+}
+
 .contact-btn a:hover{
   color: white !important;
   background-color: #090b3c;
@@ -395,6 +408,23 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+  .client-logo {
+    width: calc(100% / 4); /* Adjust to show a number of logos simultaneously */
+  }
+}
+
+@media (max-width: 920px) {
+  .client-logo {
+    width: calc(100% / 7); /* Adjust to show a number of logos simultaneously */
+  }
+}
+
+@media (max-width: 1440px) {
+  .client-logo {
+    width: calc(100% / 11); /* Adjust to show a number of logos simultaneously */
+  }
+}
 
 
 

@@ -17,11 +17,14 @@ var spinner = function () {
 
 
 let nav = document.querySelector(".navbar");
+let colorChange = document.querySelector("#contact-changeColor");
 window.onscroll = function () {
     if(document.documentElement.scrollTop > 20){
         nav.classList.add("header-scrolled");
+        colorChange.classList.add("contact-changeColor");
     }else{
         nav.classList.remove("header-scrolled");
+        colorChange.classList.remove("contact-changeColor");
     }
 }
 
